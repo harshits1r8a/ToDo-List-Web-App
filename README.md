@@ -17,7 +17,7 @@ This ToDo List Web App is a simple and intuitive tool to help you manage your ta
 - **Responsive Design:** Access your ToDo list from any device – desktop, tablet, or mobile. The responsive design ensures a seamless user experience across different screen sizes.
 
 ## Working Link:
-https://harshits1r8a.github.io/Todo-web-app/
+https://harshits1r8a.github.io/ToDo-List-Web-App/
 
 ## Screenshot
 
