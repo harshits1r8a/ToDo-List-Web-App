@@ -1,0 +1,272 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background: #fff;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: 'Quicksand', sans-serif;
+  position: relative;
+}
+
+:root {
+  --main-col: #0ab6ab;
+}
+
+ul li {
+  text-decoration: none;
+  list-style: none;
+}
+
+.container {
+  padding: 0 2rem;
+  margin-bottom: 4rem;
+}
+
+/* CSS for todo app */
+.todolist {
+  max-height: 30vh;
+  overflow: scroll;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+/* scrollbar */
+.todolist::-webkit-scrollbar {
+  width: 18px;
+}
+.todolist::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+
+.todolist::-webkit-scrollbar-thumb {
+  background-color: var(--main-col);
+  border-radius: 20px;
+  border: 6px solid transparent;
+  background-clip: content-box;
+}
+.todolist::-webkit-scrollbar-thumb:hover {
+  background-color: #0ab6abd3;
+}
+
+.todobox {
+  width: 35%;
+  margin-top: -10rem;
+  background: #000;
+  border-radius: 2rem;
+}
+
+.todoheading {
+  background: var(--main-col);
+  height: 8vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.5rem;
+  font-weight: 500;
+}
+
+.day {
+  margin: 2rem 0 1.5rem 0;
+}
+
+.day-tag {
+  font-size: 1.8rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.day .date {
+  color: #bfbfbf;
+  font-weight: 500;
+  font-size: 1.4rem;
+}
+
+ul .todolist-item {
+  background: #201f1f;
+  margin: 1rem 0;
+  padding: 0.8rem 1.2rem;
+  border-radius: 0.5rem;
+  user-select: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.task {
+  flex: 1;
+  font-size: 1.8rem;
+}
+
+.action {
+  width: 2rem;
+  height: 2rem;
+  display: inline-block;
+  margin-right: 1.5rem;
+  border: 2px solid var(--main-col);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  font-size: 1.5rem;
+}
+
+.delete {
+  color: var(--main-col);
+  transition: all 0.3s ease-in-out;
+  font-size: 2.2rem;
+}
+.delete:hover {
+  scale: 1.1;
+}
+
+.checked > .action {
+  background: var(--main-col);
+}
+.checked > .task {
+  text-decoration: line-through;
+}
+
+/* Input */
+
+.input-box {
+  background: #fff;
+  padding: 1rem 1.2rem;
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 2.5rem;
+}
+
+#todo-input {
+  color: var(--main-col);
+  border: none;
+  outline: none;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 1.8rem;
+  font-weight: 600;
+  width: 70%;
+  flex: 5;
+}
+#todo-input::placeholder {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+.addbtn {
+  color: var(--main-col);
+  transition: all 0.3s ease-in-out;
+  font-size: 1.6rem;
+  padding: 0.1rem 0.4rem;
+  border-radius: 50%;
+  transition: all 0.3 ease-in-out;
+}
+
+.addbtn:hover {
+  background: var(--main-col);
+  font-size: 1.6rem;
+  color: #fff;
+  border-radius: 50%;
+  scale: 1.1;
+}
+
+/* alert */
+.alert {
+  color: #4d4d4d;
+  background: var(--main-col);
+  font-size: 2rem;
+  padding: 3rem 5rem;
+  border-radius: 1.2rem;
+  font-weight: 500;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 0.3s ease-out;
+  text-align: center;
+  display: none;
+  z-index: 9999;
+}
+
+.todobox::before {
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  backdrop-filter: blur(10px);
+  background-color: #19191946;
+  display: none;
+}
+
+.todobox.showBefore::before {
+  display: block; /* Display when the showBefore class is added */
+}
+
+/* # Phone */
+@media screen and (max-width: 350px) {
+  .todobox {
+    width: 90%;
+  }
+  #todo-input {
+    font-size: 1.2rem;
+    font-weight: 600;
+    flex: 5;
+  }
+  #todo-input::placeholder {
+    font-size: 1.2rem;
+    font-weight: 600;
+  }
+  .task {
+    font-size: 1.2rem;
+  }
+  .action {
+    margin-right: 1rem;
+  }
+  .alert{
+    font-size: 1.8rem;
+    font-weight: 600;
+  } 
+}
+
+@media only screen and (min-width: 351px) and (max-width: 768px) {
+  .todobox {
+    width: 80%;
+  }
+  #todo-input {
+    font-size: 1.4rem;
+    font-weight: 600;
+    flex: 5;
+  }
+  #todo-input::placeholder {
+    font-size: 1.4rem;
+    font-weight: 600;
+  }
+  .task {
+    font-size: 1.4rem;
+  }
+  .action {
+    margin-right: 1rem;
+  }
+  .alert{
+    font-size: 1.8rem;
+    font-weight: 600;
+  } 
+}
