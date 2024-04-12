@@ -22,7 +22,8 @@ This ToDo List Web App is a simple and intuitive tool to help you manage your ta
 
 ## Screenshot
 
-https://github.com/harshits1r8a/Todo-web-app/assets/91357996/4ed23d97-cdd7-463a-b79c-97e45484da72
+![Screenshot 2024-04-12 113800](https://github.com/harshits1r8a/ToDo-List-Web-App-task-in-InternPe/assets/91357996/472872d8-e212-4a06-a064-88321345df04)
+
 
 ## Getting Started
 
