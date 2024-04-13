@@ -14,9 +14,9 @@ This ToDo List Web App is a simple and intuitive tool to help you manage your ta
 
 - **Due Dates:** Set due dates for your tasks to ensure you stay on top of your deadlines. The app provides a visual representation of upcoming tasks.
 
-- **Responsive Design:** Access your ToDo list from any device – desktop, tablet, or mobile. The responsive design ensures a seamless user experience across different screen sizes.
+- **Responsive Design:** Access your ToDo list from any device–desktop, tablet, or mobile. The responsive design ensures a seamless user experience across different screen sizes.
 
-- [Demo](https://harshits1r8a.github.io/ToDo-List-Web-App-task-in-InternPe/)
+- [Demo](https://harshits1r8a.github.io/ToDo-List-Web-App-task-in-InternPe/](https://harshits1r8a.github.io/todo_list_web_app-task-in-internPe/)
 
 
 
